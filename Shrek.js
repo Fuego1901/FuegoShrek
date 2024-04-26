@@ -6,9 +6,7 @@ class Misiones {
     }
 
     esDificil() {
-    if (this.nombreDelSolicitante.charAt(0) === 'G'){
-        return true
-    }
+        (this.nombreDelSolicitante.charAt(0) === 'G')
 }
     
     puntosDeRecompensaPorMision(){
@@ -69,6 +67,10 @@ class Shrek {
         return this.puntosDeRecompensaPorMision.reduce((acumulador, valorActual) => {
             acumulador + valorActual;
         },0)
+    }
+
+    nombresSolicitantes = function(){
+        return this.misiones.map(unaMision => unaMision.nombreDelSolicitante)
     }
 }
 
